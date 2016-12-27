@@ -9,3 +9,9 @@ This project will include Express framework as well.
 ```
 npm init
 ```
+
+# Install Express
+
+```
+npm install -S express
+```
