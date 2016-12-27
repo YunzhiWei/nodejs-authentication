@@ -16,7 +16,7 @@ npm init
 npm install -S express
 ```
 
-# 1st version of server.js
+# 1st version of `server.js`
 
 # Install Morgan
 
@@ -24,18 +24,22 @@ npm install -S express
 npm install -S morgan
 ```
 
-# Using pulic folder for static files
+# Using `pulic` folder for static files
 
-* add public folder
-* create index.html
-* save a copy for the current server.js (save as server-1.js)
+* add `public` folder
+* create `index.html`
+* save a copy for the current `server.js` (save as `server-1.js`)
 
-# 2nd version of server.js
+# 2nd version of `server.js`
 
-* update server.js to use 'morgan', to use public folder and listen to the port
+* update `server.js` to use 'morgan', to use `public` folder and listen to the port
 
 # Install body-parser
 
 ```
 npm install -S body-parser
 ```
+
+# Save a copy for the current `server.js`
+
+* save current `server.js` as `server-2.js`
