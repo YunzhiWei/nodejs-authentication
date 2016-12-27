@@ -4,7 +4,8 @@
   "description": "This is a nodejs project to test many different kinds of authentication methods.",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "morgan": "^1.7.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -15,3 +15,9 @@ npm init
 ```
 npm install -S express
 ```
+
+# Install Morgan
+
+```
+npm install -S morgan
+```
