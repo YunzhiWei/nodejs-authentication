@@ -33,3 +33,9 @@ npm install -S morgan
 # 2nd version of server.js
 
 * update server.js to use 'morgan', to use public folder and listen to the port
+
+# Install body-parser
+
+```
+npm install -S body-parser
+```
