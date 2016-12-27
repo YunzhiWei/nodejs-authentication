@@ -16,8 +16,20 @@ npm init
 npm install -S express
 ```
 
+# 1st version of server.js
+
 # Install Morgan
 
 ```
 npm install -S morgan
 ```
+
+# Using pulic folder for static files
+
+* add public folder
+* create index.html
+* save a copy for the current server.js (save as server-1.js)
+
+# 2nd version of server.js
+
+* update server.js to use 'morgan', to use public folder and listen to the port
