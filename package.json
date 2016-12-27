@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-authentication",
+  "version": "1.0.0",
+  "description": "This is a nodejs project to test many different kinds of authentication methods.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YunzhiWei/nodejs-authentication.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YunzhiWei/nodejs-authentication/issues"
+  },
+  "homepage": "https://github.com/YunzhiWei/nodejs-authentication#readme"
+}
