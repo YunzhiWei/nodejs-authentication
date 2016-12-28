@@ -70,3 +70,9 @@ npm install -S body-parser
 > if you put any routers or static pulic folder before authentication check, that will work properly without authentication check
 > user name and password will be recorded and be binded in all subsequent http request
 * save current `server.js` as `server-basic-auth.js`
+
+# Install body-parser
+
+```
+npm install -S cookie-parser
+```
