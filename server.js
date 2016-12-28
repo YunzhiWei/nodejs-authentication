@@ -19,6 +19,8 @@ app.use(bodyParser.json());
 
 // declare each router one by one
 app.use('/dishes', require('./routes/dishes'));
+app.use('/promotions', require('./routes/promotions'));
+app.use('/leaders', require('./routes/leaders'));
 
 app.use(express.static(__dirname + '/public'));
 
