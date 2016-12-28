@@ -10,6 +10,30 @@ var app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
+// Basic Authentication
+function authCheck (req, res, next) {
+  console.log("req.headers", req.headers);
+  var authHeader = req.headers.authorization;
+  if (!authHeader) {
+    var err = new Error('You are not authenticated!');
+    err.status = 401;
+    next(err);
+    return;
+  }
+
+  var auth = new Buffer(authHeader.split(' ')[1], 'base64').toString().split(':');
+  var user = auth[0];
+  var pass = auth[1];
+  if (user == 'admin' && pass == 'password') {
+    next(); // authorized
+  }
+  else {
+    var err = new Error('You are not authenticated!');
+    err.status = 401;
+    next(err);
+  }
+}
+app.use(authCheck);    // authentication check: any routers before authentication check, do not need user name and password
 
 // routers
 
@@ -23,6 +47,19 @@ app.use('/promotions', require('./routes/promotions'));
 app.use('/leaders', require('./routes/leaders'));
 
 app.use(express.static(__dirname + '/public'));
+
+function errorHandler(err,req,res,next) {
+  console.log("Error message: ", err);
+  res.writeHead(
+    err.status || 500,
+    {
+      'WWW-Authenticate': 'Basic',
+      'Content-Type': 'text/plain'
+    }
+  );
+  res.end(err.message);
+}
+app.use(errorHandler);
 
 app.listen(port, hostname, function(){
   console.log(`Server running at http://${hostname}:${port}/`);

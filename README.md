@@ -56,3 +56,16 @@ npm install -S body-parser
 
 * Express Router: dishes
 * save current `server.js` as `server-4.js`
+
+# more routers in dedicate foder `routes`
+
+* move router source code from `server.js` into `dishes.js`
+* add dedicate folder `routes`
+* add two more routers
+* save current `server.js` as `server-5.js`
+
+# Basic Authentication
+
+* authentication check & error handler
+> if you put any routers or static pulic folder before authentication check, that will work properly without authentication check
+> user name and password will be recorded and be binded in all subsequent http request
