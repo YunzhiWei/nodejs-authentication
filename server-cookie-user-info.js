@@ -2,8 +2,6 @@ var express       = require('express');
 var morgan        = require('morgan');
 var bodyParser    = require('body-parser');
 var cookieParser  = require('cookie-parser');
-var session       = require('express-session');
-var FileStore     = require('session-file-store')(session);
 
 var hostname = 'localhost';
 var port = 3000;
@@ -12,19 +10,14 @@ var app = express();
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.use(session({
-  name: 'session-id',
-  secret: '12345-67890-09876-54321',
-  saveUninitialized: true,
-  resave: true,
-  store: new FileStore()
-}));
+app.use(cookieParser('12345-67890-09876-54321')); // secret key
 
 // Basic Authentication
 function authCheck (req, res, next) {
   console.log("req.headers: ", req.headers);
+  console.log("req.signedCookies: ", req.signedCookies);
 
-  if(!req.session.user) {
+  if(!req.signedCookies.user) {
     var authHeader = req.headers.authorization;
     if (!authHeader) {
       var err = new Error('You are not authenticated!');
@@ -47,9 +40,7 @@ function authCheck (req, res, next) {
     }
   }
   else {
-    console.log('req.session: ',req.session);
-
-    if (req.session.user === 'admin') {
+    if (req.signedCookies.user === 'admin') {
       next(); // authorized
     }
     else {
