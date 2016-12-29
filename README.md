@@ -90,3 +90,10 @@ npm install -S express-session session-file-store
 # use session to store the user information on the server side
 
 * save current `server.js` as `server-session-user-info.js`
+
+# Install `passport` `passport-local` `passport-local-mongoose` `jsonwebtoken`
+
+```
+npm install -S passport passport-local passport-local-mongoose
+npm install -S jsonwebtoken
+```
