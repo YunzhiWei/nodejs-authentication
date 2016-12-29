@@ -71,8 +71,12 @@ npm install -S body-parser
 > user name and password will be recorded and be binded in all subsequent http request
 * save current `server.js` as `server-basic-auth.js`
 
-# Install body-parser
+# Install cookie-parser
 
 ```
 npm install -S cookie-parser
 ```
+
+# use cookie to take the user information between the server and the client
+
+* save current `server.js` as `server-cookie-user-info.js`
