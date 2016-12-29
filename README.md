@@ -4,13 +4,13 @@ This is a nodejs project to test many different kinds of authentication methods.
 
 This project will include Express framework as well.
 
-# Initial npm environment config
+# Initial `npm` environment config
 
 ```
 npm init
 ```
 
-# Install Express
+# Install `express`
 
 ```
 npm install -S express
@@ -18,7 +18,7 @@ npm install -S express
 
 # 1st version of `server.js`
 
-# Install Morgan
+# Install `morgan`
 
 ```
 npm install -S morgan
@@ -32,9 +32,9 @@ npm install -S morgan
 
 # 2nd version of `server.js`
 
-* update `server.js` to use 'morgan', to use `public` folder and listen to the port
+* update `server.js` to use `morgan`, to use `public` folder and listen to the port
 
-# Install body-parser
+# Install `body-parser`
 
 ```
 npm install -S body-parser
@@ -44,7 +44,7 @@ npm install -S body-parser
 
 * save current `server.js` as `server-2.js`
 
-# 3rd version of 'server.js'
+# 3rd version of `server.js`
 
 * RESTful API: dishes
 
@@ -52,9 +52,9 @@ npm install -S body-parser
 
 * save current `server.js` as `server-3.js`
 
-# 4th version of 'server.js'
+# 4th version of `server.js`
 
-* Express Router: dishes
+* Express Router: `dishes`
 * save current `server.js` as `server-4.js`
 
 # more routers in dedicate foder `routes`
@@ -71,7 +71,7 @@ npm install -S body-parser
 > user name and password will be recorded and be binded in all subsequent http request
 * save current `server.js` as `server-basic-auth.js`
 
-# Install cookie-parser
+# Install `cookie-parser`
 
 ```
 npm install -S cookie-parser
@@ -80,3 +80,13 @@ npm install -S cookie-parser
 # use cookie to take the user information between the server and the client
 
 * save current `server.js` as `server-cookie-user-info.js`
+
+# Install `express-session` and `session-file-store`
+
+```
+npm install -S express-session session-file-store
+```
+
+# use session to store the user information on the server side
+
+* save current `server.js` as `server-session-user-info.js`
